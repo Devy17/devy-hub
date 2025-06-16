@@ -8,14 +8,13 @@ import html from "remark-html";
 
 export default function Post({ title, date, contentHtml }) {
   return (
-    <main className="prose prose-invert mx-auto p-6 max-w-3xl">
-      <h1>{title}</h1>
-      <p className="text-sm text-gray-400">{date}</p>
-      <div
-        className="prose prose-zinc prose-invert max-w-none"
-        dangerouslySetInnerHTML={{ __html: contentHtml }}
-      />
-    </main>
+    <div className="min-h-screen bg-black text-white flex justify-center px-4">
+      <div className="prose prose-zinc prose-invert max-w-none">
+        <h1>{title}</h1>
+        <p className="text-sm text-gray-400">{date}</p>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      </div>
+    </div>
   );
 }
 
